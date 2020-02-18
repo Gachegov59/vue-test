@@ -1,0 +1,14 @@
+extends ./layout/layout
+
+block variables
+	- var page_title = 'VUE';
+
+block content
+	.container
+		div#vue( :title="message2")
+			<template lang="pug">
+
+				h1 {{message}}
+				</template>
+
+

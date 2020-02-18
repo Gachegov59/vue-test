@@ -1,0 +1,50 @@
+html {
+  font-size: $base-font-size;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: $base-color;
+}
+
+h1 {
+  font-size: rem(36px);
+}
+
+h2 {
+  font-size: rem(32px);
+}
+
+h3 {
+  font-size: rem(28px);
+}
+
+h4 {
+  font-size: rem(24px);
+}
+
+h5 {
+  font-size: rem(16px);
+}
+
+h6 {
+  font-size: rem(12px);
+}
+
+a {
+  transition: all .3s ease;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.list {
+  padding: 0;
+  list-style-type: none;
+}

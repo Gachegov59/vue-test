@@ -1,0 +1,42 @@
+.header {
+  font-family: $roboto;
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    flex-grow: .5;
+    margin-left: auto;
+  }
+
+  &__nav {
+    margin-left: auto;
+    flex-grow: .5;
+  }
+
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 25px;
+    &-item {
+      text-transform: uppercase;
+      padding: 15px 25px;
+      cursor: pointer;
+      &:hover {
+        a {
+          color: $hover-color;
+        }
+      }
+    }
+
+    &-link {
+      color: $second-color;
+    }
+  }
+}

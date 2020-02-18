@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "fack"
+AuthUserFile /web/alex.test.kek.ru.com/public_html/.htpasswd
+Require valid-user
