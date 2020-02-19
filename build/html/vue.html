@@ -8,6 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="format-detection" content="telephone=no"/>
     <link rel="stylesheet" href="../css/style.css" media="all"/>
+    <link rel="icon" href="../images/favicon.png"/>
     <script async="async" src="../js/bundle.js"></script><script src="https://kit.fontawesome.com/5b7cdef505.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -29,8 +30,15 @@
     </header>
     <main>
       <div class="container">
-        <div id="vue" :title="message2"><template lang="pug">
-          <h1>{{message}}</h1></template>
+        <div id="vue" :title="message2">
+          <template lang="pug">
+            <ul>
+              <li v-for="(item, index) in list">index {{ index }}: {{ item }}</li>
+            </ul>
+            <ul>
+              <li v-for="user in users">{{user.id}}: {{user.name}}</li>
+            </ul>
+          </template>
         </div>
       </div>
     </main>

@@ -6,9 +6,11 @@ block variables
 block content
 	.container
 		div#vue( :title="message2")
-			<template lang="pug">
+			template(lang="pug")
 
-				h1 {{message}}
-				</template>
+				ul
+					li(v-for="(item, index) in list")
+						| index {{ index }}: {{ item }}
 
-
+				ul
+					li(v-for="user in users") {{user.id}}: {{user.name}}

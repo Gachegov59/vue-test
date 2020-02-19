@@ -2,8 +2,11 @@ $(function () {
     var app = new Vue({
         el: '#vue',
         data: {
-            message: 'Hello Vue!',
-            message2: 'кек '
+            list: ['один', 'два', 'три'],
+            users: [
+                {id: 1, name: 'Ivan'},
+                {id: 2, name: 'Pety'}
+            ]
         }
     })
 })
