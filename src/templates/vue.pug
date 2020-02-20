@@ -5,12 +5,14 @@ block variables
 
 block content
 	.container
-		div#vue( :title="message2")
+		div#vue
 			template(lang="pug")
+				h3 {{ textSearch }} (длина: {{ textSearch.length }})
+				input(type="text" size="50" v-model="textSearch")
+				button( @click="getCities") Грузи
 
 				ul
-					li(v-for="(item, index) in list")
-						| index {{ index }}: {{ item }}
+					li( v-for= "hashtag in hashtags") {{ hashtag }}
 
 				ul
-					li(v-for="user in users") {{user.id}}: {{user.name}}
+					li( v-for= "city  in cities") {{ city.region }}: {{city.city}}
