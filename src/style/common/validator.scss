@@ -1,0 +1,12 @@
+.error {
+    & + label {
+      position: absolute;
+      left: 10px;
+      bottom: -13px;
+      background: transparent;
+      color: red;
+      width: auto;
+      font-size: 12px;
+    }
+
+  }

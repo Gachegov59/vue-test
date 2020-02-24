@@ -7,6 +7,7 @@ mixin head(page_title, scripts)
         meta(name="apple-mobile-web-app-capable", content="yes")
         meta(name="format-detection", content="telephone=no")
         link(rel='stylesheet', href='../css/style.css', media='all')
+        link(rel='icon' href='../images/settings.svg')
 
         -   if (scripts && scripts.length)
             for script in scripts
@@ -14,3 +15,4 @@ mixin head(page_title, scripts)
 
         script(async src='../js/bundle.js')
         <script src="https://kit.fontawesome.com/5b7cdef505.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/axios@0.19.2/dist/axios.min.js"></script>

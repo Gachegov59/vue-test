@@ -39,11 +39,15 @@ a {
   text-decoration: none;
 }
 
+input {
+  outline: none;
+}
 .container {
   max-width: 1600px;
   margin: 0 auto;
   padding: 10px;
 }
+
 .list {
   padding: 0;
   list-style-type: none;

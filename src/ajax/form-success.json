@@ -1,0 +1,8 @@
+{
+  "status": false,
+  "successMessage": "Успешно все прошло",
+  "errors": {
+    "name": "Плохое имя",
+    "phone": "Не тот телефон"
+  }
+}

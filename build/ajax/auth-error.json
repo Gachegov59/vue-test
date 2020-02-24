@@ -1,0 +1,7 @@
+{
+  "status": false,
+  "errors": {
+    "email": "Введите email",
+    "password": "Введите пароль"
+  }
+}

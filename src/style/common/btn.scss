@@ -1,0 +1,38 @@
+.btn {
+  background: #b12532;
+  padding: 16px 30px;
+  color: white;
+  border-radius: 21.5px;
+  text-transform: uppercase;
+  //font-family: $muller-regular;
+  font-size: 11px;
+  letter-spacing: .66px;
+  display: inline-block;
+  max-height: 43px;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    //background: $accent-color;
+    //color: $base-color;
+  }
+
+  @include phone {
+    font-size: 21px;
+    max-width: 545px;
+    max-height: none;
+    border-radius: 40px;
+  }
+  //@include respond-to-max($tablet-width-small) {
+  //  min-height: 50px;
+  //  font-size: 10px;
+  //}
+
+  &-large {
+    padding: 16px 47px;
+
+    &-extra {
+      padding: 16px 77px;
+    }
+  }
+}

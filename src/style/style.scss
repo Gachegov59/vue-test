@@ -6,7 +6,13 @@
 //какие-то глобальные стили
 @import "common/fonts";
 @import "common/base";
+@import "common/popup";
+@import "common/form";
+@import "common/btn";
+@import "common/_loader.scss";
+@import "common/validator.scss";
 
 //Ваши блоки
 @import "blocks/header/header";
 @import "blocks/footer";
+@import "blocks/flexbox";

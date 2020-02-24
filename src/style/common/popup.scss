@@ -1,0 +1,109 @@
+.popup {
+  //background: $base-color;
+  z-index: 120;
+  //position: absolute;
+  //top: 30px;
+  //left: 30px;
+  max-width: 467px;
+  width: 100%;
+  display: none;
+  padding: 60px 63px 60px 47px !important;
+  //font-family: $muller-regular;
+
+  &_narrow {
+    label,
+    input {
+      width: 83px;
+      flex-basis: 83px;
+    }
+
+  }
+
+  &__input {
+    &-container {
+      input {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    svg path {
+      transition: all .3s ease;
+    }
+
+    &:hover {
+      svg path {
+        //fill: $accent-color;
+      }
+    }
+  }
+
+  &__btn {
+    min-width: 203px;
+    margin: 17px 0 5px;
+  }
+
+  &__title {
+    font-size: 24.5px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: .8px;
+    //font-family: $anglecia-pro;
+  }
+
+  &__text {
+    line-height: 20px;
+    margin-bottom: 34px;
+    letter-spacing: 1px;
+  }
+
+  &__help {
+    display: block;
+    margin-top: 5px;
+    letter-spacing: .4px;
+    //font-family: $muller-regular;
+    cursor: pointer;
+
+    span {
+      text-transform: uppercase;
+      //color: $font-second;
+      //font-family: $muller-regular;
+      font-size: 11px;
+      //border-bottom: 1px dashed $font-second;
+    }
+  }
+
+  .btn {
+    min-height: auto;
+    border: none;
+  }
+
+  .fancybox-close-small {
+    right: 20px;
+    top: 20px;
+  }
+
+  .js-form-validation__ajax-text {
+    color: #b12532;
+  }
+
+  .js-global-error {
+    position: absolute;
+    bottom: -22px;
+    color: #b12532;
+  }
+
+  .js-form-validation__ajax-text {
+    position: absolute;
+    bottom: -16px;
+    right: 0;
+  }
+}
