@@ -1,0 +1,12 @@
+mixin popup-recovery()
+	form(action="/ajax/auth-error.json" method="GET" name="form" ).popup.js-popup-recovery.js-form.form
+		.popup__title Восстановление доступа к личному кабинету
+		.popup__text Пожалуйста, укажите e-mail, который вы использовали для регистрации и входа в личный кабинет.
+		.input-container.graduation-training__input-container.popup_narrow
+			label.form__label(for="user_mail_send" ) E-MAIL
+			input.form__input(id="user_mail_sent" type="text" name="email" data-msg-required="Введите email" required)
+			.js-global-error
+		button(type="submit" ).btn.popup__btn далее
+
+
+

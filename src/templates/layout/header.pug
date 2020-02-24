@@ -1,3 +1,9 @@
+include ../components/popups/popup-recovery.pug
+include ../components/popups/popup-new-password.pug
+include ../components/popups/popup-password-changed.pug
+include ../components/popups/popup-password-messege.pug
+include ../components/popups/popup-in.pug
+
 mixin header()
 	header.header
 		.container
@@ -5,9 +11,15 @@ mixin header()
 				.header__logo
 					a(href="index.html"): img(src="../img/logo.png")
 				nav.header__nav
-					ul.list.header__list
+					ul.list.header__list.js-header__list
 						li.list__item.header__list-item: a(href="vue.html").header__list-link vue
+						li.list__item.header__list-item: a(href="flexbox.html").header__list-link flexbox
 						li.list__item.header__list-item: a(href="#").header__list-link Орлы
 						li.list__item.header__list-item: a(href="#").header__list-link Орлы
-						li.list__item.header__list-item: a(href="#").header__list-link Орлы
-						li.list__item.header__list-item: a(href="#").header__list-link Орлы
+						li.list__item.header__list-item: a( data-popup='.js-popup-in').header__list-link.js-fancy.js-auth.popup-with-form ВХОД
+
+				+popup-in()
+				+popup-recovery()
+				+popup-new-password()
+				+popup-password-messege()
+				+popup-password-changed()

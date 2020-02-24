@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="format-detection" content="telephone=no"/>
     <link rel="stylesheet" href="../css/style.css" media="all"/>
-    <link rel="icon" href="../images/favicon.png"/>
+    <link rel="icon" href="../images/settings.svg"/>
     <script async="async" src="../js/bundle.js"></script><script src="https://kit.fontawesome.com/5b7cdef505.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/axios@0.19.2/dist/axios.min.js"></script>
   </head>
@@ -18,14 +18,63 @@
         <div class="header__wrap">
           <div class="header__logo"><a href="index.html"><img src="../img/logo.png"/></a></div>
           <nav class="header__nav">
-            <ul class="list header__list">
+            <ul class="list header__list js-header__list">
               <li class="list__item header__list-item"><a class="header__list-link" href="vue.html">vue</a></li>
+              <li class="list__item header__list-item"><a class="header__list-link" href="flexbox.html">flexbox</a></li>
               <li class="list__item header__list-item"><a class="header__list-link" href="#">Орлы</a></li>
               <li class="list__item header__list-item"><a class="header__list-link" href="#">Орлы</a></li>
-              <li class="list__item header__list-item"><a class="header__list-link" href="#">Орлы</a></li>
-              <li class="list__item header__list-item"><a class="header__list-link" href="#">Орлы</a></li>
+              <li class="list__item header__list-item"><a class="header__list-link js-fancy js-auth popup-with-form" data-popup=".js-popup-in">ВХОД</a></li>
             </ul>
           </nav>
+          <form class="form popup js-popup-in js-form" action="/ajax/auth-error-valid.json" method="GET" name="form">
+            <div class="popup__title">Вход в личный кабинет</div>
+            <div class="popup__text">Мы высылаем пароли на почту исключительно студентам</div>
+            <div class="input-container graduation-training__input-container popup_narrow">
+              <label class="form__label" for="user_mail">E-MAIL</label>
+              <input class="form__input" id="user_mail" type="email" name="email" data-rule-email="true" data-msg-required="Введите email" required="required"/>
+            </div>
+            <div class="input-container graduation-training__input-container popup_narrow">
+              <label class="form__label" for="user_password">Пароль</label>
+              <input class="form__input" id="user_password" type="password" name="password" data-msg-required="Введите пароль" required="required"/>
+              <div class="js-global-error"></div>
+            </div>
+            <button class="btn popup__btn" type="submit">войти</button>
+            <div class="js-popup-forgot popup__help"><span class="js-fancy" data-popup=".js-popup-recovery">Забыли пароль ?</span></div>
+          </form>
+          <form class="popup js-popup-recovery js-form form" action="/ajax/auth-error.json" method="GET" name="form">
+            <div class="popup__title">Восстановление доступа к личному кабинету</div>
+            <div class="popup__text">Пожалуйста, укажите e-mail, который вы использовали для регистрации и входа в личный кабинет.</div>
+            <div class="input-container graduation-training__input-container popup_narrow">
+              <label class="form__label" for="user_mail_send">E-MAIL</label>
+              <input class="form__input" id="user_mail_sent" type="text" name="email" data-msg-required="Введите email" required="required"/>
+              <div class="js-global-error"></div>
+            </div>
+            <button class="btn popup__btn" type="submit">далее</button>
+          </form>
+          <form class="popup js-form-validation js-passord-new" action="/ajax/auth-error.json" method="GET" name="form">
+            <div class="popup__title">Введите новый пароль</div>
+            <div class="popup__text">Тут правила пароля, не больше восьми символов, пять гласных.</div>
+            <div class="input-container graduation-training__input-container popup__input-container">
+              <label for="user_password_new">Новый пароль</label>
+              <input id="user_password_new" type="password" name="email" required="required" autocomplete="on"/>
+              <div class="input-container-border"></div>
+            </div>
+            <div class="input-container graduation-training__input-container popup__input-container">
+              <label for="user_password_new-repeat">Повторите новый пароль</label>
+              <input id="user_password_new-repeat" type="password" name="password" required="required"/>
+              <div class="js-global-error"></div>
+            </div>
+            <div class="btn popup__btn">далее</div>
+          </form>
+          <form class="popup js-popup-message">
+            <div class="popup__title js-popup-title">сообщение на сброс пароля отправлено!</div>
+            <div class="popup__text js-popup-text">Сообщение было отправлено на вашу почту. Пожалуйста, следуйте инструкциям в письме, чтобы сбросить пароль.</div>
+            <div class="btn popup__btn">ок</div>
+          </form>
+          <form class="popup js-popup-message">
+            <div class="popup__title js-popup-title">Пароль успешно сменен!</div>
+            <div class="btn popup__btn js-popup-text">ок</div>
+          </form>
         </div>
       </div>
     </header>

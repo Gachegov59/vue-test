@@ -1,0 +1,14 @@
+mixin popup-in()
+	form(action="/ajax/auth-error-valid.json" method="GET" name="form" ).form.popup.js-popup-in.js-form
+		.popup__title Вход в личный кабинет
+		.popup__text Мы высылаем пароли на почту исключительно студентам
+		.input-container.graduation-training__input-container.popup_narrow
+			label.form__label(for="user_mail") E-MAIL
+			input.form__input(id="user_mail" type="email" name="email" data-rule-email="true" data-msg-required="Введите email" required)
+		.input-container.graduation-training__input-container.popup_narrow
+			label.form__label(for="user_password") Пароль
+			input.form__input(id="user_password" type="password" name="password"  data-msg-required="Введите пароль" required )
+			.js-global-error
+		button(type="submit").btn.popup__btn войти
+		.js-popup-forgot.popup__help: span( data-popup='.js-popup-recovery').js-fancy Забыли пароль ?
+
